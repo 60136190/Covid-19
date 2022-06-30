@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/main_color"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/frame_slide"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_50sdp"
+        app:layout_constraintTop_toTopOf="parent">
+        <View
+            android:layout_width="@dimen/_180sdp"
+            android:layout_height="@dimen/_180sdp"
+            android:layout_gravity="center"
+           android:background="@drawable/border_view_getstarted"/>
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/slide_img"
+            android:layout_width="@dimen/_210sdp"
+            android:layout_height="@dimen/_210sdp"
+            android:layout_gravity="center" />
+    </FrameLayout>
+
+
+    <TextView
+        android:id="@+id/slide_heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:gravity="center"
+        android:text="STAY SAFE"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_20ssp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/frame_slide" />
+
+    <TextView
+        android:id="@+id/slide_descs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_13ssp"
+        app:layout_constraintTop_toBottomOf="@+id/slide_heading"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

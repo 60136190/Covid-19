@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ct_a"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_220sdp"
+        android:background="@drawable/border_layout_home_fragment"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_covid19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:text="COVID-19"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_18ssp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_user"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_margin="@dimen/_10sdp"
+            android:src="@drawable/coronavirus"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:src="@drawable/ic_bell"
+            app:layout_constraintBottom_toBottomOf="@+id/img_user"
+            app:layout_constraintRight_toLeftOf="@+id/img_user"
+            app:layout_constraintTop_toTopOf="@+id/img_user" />
+
+        <TextView
+            android:id="@+id/tv_a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:text="Application Corona Virus support all people?"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_13ssp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_covid19" />
+
+        <TextView
+            android:id="@+id/tv_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:text="During the time when many localities in the province implemented social distancing, many grassroots unions and grassroots unions deployed and mobilized young."
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/img_a"
+            app:layout_constraintTop_toBottomOf="@+id/tv_a" />
+
+        <ImageView
+            android:id="@+id/img_a"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_130sdp"
+            android:layout_marginBottom="-10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/peoplecold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/ln_a"
+            android:layout_width="@dimen/_90sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:gravity="center"
+            android:background="@drawable/border_button_getstart"
+            android:backgroundTint="@color/live_update"
+            android:orientation="horizontal"
+            android:layout_margin="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_description">
+
+            <ImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_telephone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Call now"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_13ssp" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/_60sdp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ct_a">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/tv_presentation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:text="Protect yourself"
+                android:textColor="@color/main_color"
+                android:textSize="@dimen/_14ssp"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcv_steps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                app:layout_constraintTop_toBottomOf="@+id/tv_presentation" />
+
+            <TextView
+                android:id="@+id/tv_utilities"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:text="Utilities"
+                android:textColor="@color/main_color"
+                android:textSize="@dimen/_14ssp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rcv_steps" />
+
+            <LinearLayout
+                android:id="@+id/ln_b"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="10"
+                app:layout_constraintTop_toBottomOf="@+id/tv_utilities">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/ct_hospital"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:layout_weight="5"
+                    android:backgroundTint="@color/gray"
+                    android:background="@drawable/border_background_radius_10sdp">
+                    <View
+                        android:id="@+id/view_a"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:background="@drawable/border_background_radius_10sdp"
+                        android:backgroundTint="@color/second_color" />
+
+                    <ImageView
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/hospital"
+                        app:layout_constraintTop_toTopOf="@+id/view_a"
+                        app:layout_constraintBottom_toBottomOf="@+id/view_a"
+                        app:layout_constraintLeft_toLeftOf="@+id/view_a"
+                        app:layout_constraintRight_toRightOf="@+id/view_a"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hospital"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/_13ssp"
+                        android:textColor="@color/main_color"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        app:layout_constraintTop_toTopOf="@+id/view_a"
+                        app:layout_constraintBottom_toBottomOf="@+id/view_a"
+                        app:layout_constraintLeft_toRightOf="@+id/view_a"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/ct_medicine"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:layout_weight="5"
+                    android:backgroundTint="@color/gray"
+                    android:background="@drawable/border_background_radius_10sdp">
+                    <View
+                        android:id="@+id/view"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:background="@drawable/border_background_radius_10sdp"
+                        android:backgroundTint="@color/orange" />
+
+                    <ImageView
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/medicine"
+                        app:layout_constraintTop_toTopOf="@+id/view"
+                        app:layout_constraintBottom_toBottomOf="@+id/view"
+                        app:layout_constraintLeft_toLeftOf="@+id/view"
+                        app:layout_constraintRight_toRightOf="@+id/view"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Medicine"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/_13ssp"
+                        android:textColor="@color/main_color"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        app:layout_constraintTop_toTopOf="@+id/view"
+                        app:layout_constraintBottom_toBottomOf="@+id/view"
+                        app:layout_constraintLeft_toRightOf="@+id/view"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ln_c"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="10"
+                app:layout_constraintTop_toBottomOf="@+id/ln_b">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/ct_consultency"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:layout_weight="5"
+                    android:backgroundTint="@color/gray"
+                    android:background="@drawable/border_background_radius_10sdp">
+                    <View
+                        android:id="@+id/view_c"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:background="@drawable/border_background_radius_10sdp"
+                        android:backgroundTint="@color/yellow" />
+
+                    <ImageView
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/stethoscope"
+                        app:layout_constraintTop_toTopOf="@+id/view_c"
+                        app:layout_constraintBottom_toBottomOf="@+id/view_c"
+                        app:layout_constraintLeft_toLeftOf="@+id/view_c"
+                        app:layout_constraintRight_toRightOf="@+id/view_c"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Consultency"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/_13ssp"
+                        android:textColor="@color/main_color"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        app:layout_constraintTop_toTopOf="@+id/view_c"
+                        app:layout_constraintBottom_toBottomOf="@+id/view_c"
+                        app:layout_constraintLeft_toRightOf="@+id/view_c"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/ct_diagonist"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:layout_weight="5"
+                    android:backgroundTint="@color/gray"
+                    android:background="@drawable/border_background_radius_10sdp">
+                    <View
+                        android:id="@+id/view_d"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:background="@drawable/border_background_radius_10sdp"
+                        android:backgroundTint="@color/violet" />
+
+                    <ImageView
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/microscope"
+                        app:layout_constraintTop_toTopOf="@+id/view_d"
+                        app:layout_constraintBottom_toBottomOf="@+id/view_d"
+                        app:layout_constraintLeft_toLeftOf="@+id/view_d"
+                        app:layout_constraintRight_toRightOf="@+id/view_d"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Diagonist"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/_13ssp"
+                        android:textColor="@color/main_color"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        app:layout_constraintTop_toTopOf="@+id/view_d"
+                        app:layout_constraintBottom_toBottomOf="@+id/view_d"
+                        app:layout_constraintLeft_toRightOf="@+id/view_d"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

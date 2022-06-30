@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Covid19</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="default_web_client_id">304065966911-o7h7ctcc2jp6nbuvvhidn6ibk13p8nf1.apps.googleusercontent.com</string>
+    <string name="facebook_app_id">270572591825390</string> <string name="fb_login_protocol_scheme">fb270572591825390</string>
+
+</resources>
